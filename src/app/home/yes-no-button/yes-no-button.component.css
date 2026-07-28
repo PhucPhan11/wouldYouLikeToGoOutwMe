@@ -225,10 +225,12 @@ button:hover .star-6 {
   padding: .8rem;
   font-size: 1rem;
   width: 8em;
+  scale: var(--button-scale, 1);
   border-radius: 1rem;
   background: #fd1853;
   box-shadow: 0 .4rem #dfd9d9;
-  cursor: pointer
+  cursor: pointer;
+  transition: scale .5s ease-in-out
 }
 
 .heart-button:active {

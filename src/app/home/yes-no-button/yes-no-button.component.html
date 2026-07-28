@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-between gap-5">
-  <button class="heart-button" style="border-radius: 1rem; scale: 1; z-index: 1; transition: transform 0.5s ease-in-out;">
+  <button class="heart-button" [style.--button-scale]="yesScale" style="border-radius: 1rem; z-index: 1;">
     <span class="box">Yes</span>
     <div class="star-1">
       <svg height="25" width="25" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -42,8 +42,8 @@
       </svg>
     </div>
   </button>
-  <button class="heart-button" style="border-radius: 1rem; transition: transform 0.5s ease-in-out;"><span
-    class="box">No</span>
+  <button class="heart-button" [style.--button-scale]="noScale" (click)="onNoClick()" style="border-radius: 1rem;"><span
+    class="box">{{ noLabel }}</span>
     <div class="star-1">
       <svg height="25" width="25" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
         <circle cx="32" cy="32" r="30" fill="#fd1853"></circle>
