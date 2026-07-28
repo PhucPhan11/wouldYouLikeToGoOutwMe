@@ -1,54 +1,35 @@
 .confirmation-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 24px;
+  padding: 48px 20px;
 }
 
 .confirmation-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 760px;
+  gap: 18px;
+  max-width: 820px;
+  padding: clamp(40px, 8vw, 76px);
   text-align: center;
 }
 
-.eyebrow,
-h1,
 .summary {
   margin: 0;
-}
-
-.eyebrow {
-  color: #fd1853;
-  font-family: Montserrat, sans-serif;
-  font-size: .875rem;
-  font-weight: 700;
-  letter-spacing: .16em;
 }
 
 .headline {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin: 12px 0 16px;
-}
-
-h1 {
-  color: #ff9494;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: clamp(3rem, 10vw, 5.5rem);
-  line-height: 1;
+  gap: 20px;
 }
 
 .headline span {
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-size: clamp(3rem, 9vw, 5rem);
 }
 
 .summary {
-  color: #fd1853;
-  font-family: Montserrat, sans-serif;
-  font-size: clamp(1rem, 3vw, 1.25rem);
+  color: var(--rose-700);
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: clamp(1rem, 3vw, 1.35rem);
   font-weight: 700;
+  line-height: 1.5;
 }

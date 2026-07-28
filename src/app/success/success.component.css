@@ -1,37 +1,9 @@
-.success-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
 .success-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-}
-
-h1 {
-  color: #ff9494;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.date-button {
-  border: none;
-  border-radius: 1rem;
-  padding: .8rem;
-  background: #fd1853;
-  box-shadow: 0 .4rem #dfd9d9;
-  color: #fffcfd;
-  cursor: pointer;
-  font-family: Montserrat, sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  transition: transform .3s ease-in-out;
-}
-
-.date-button:hover {
-  background: #f08080;
-  transform: scale(.95);
+  gap: 28px;
+  max-width: 720px;
+  padding: clamp(40px, 8vw, 72px);
+  text-align: center;
 }

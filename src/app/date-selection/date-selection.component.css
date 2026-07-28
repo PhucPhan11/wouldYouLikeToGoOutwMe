@@ -1,40 +1,34 @@
 .date-selection {
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 48px 20px;
+  align-items: flex-start;
 }
 
 .date-card {
   display: flex;
   flex-direction: column;
-  width: min(100%, 760px);
+  width: min(100%, 820px);
   gap: 28px;
+  padding: clamp(28px, 5vw, 52px);
 }
 
-h1,
 h2,
 p {
   margin: 0;
 }
 
-h1 {
-  color: #ff9494;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: clamp(2rem, 6vw, 3.5rem);
+.page-title {
   text-align: center;
 }
 
 .subtitle {
-  color: #fd1853;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--rose-700);
+  font-family: "Trebuchet MS", sans-serif;
   font-size: 1.125rem;
   text-align: center;
 }
 
 h2 {
-  color: #fd1853;
-  font-family: Montserrat, sans-serif;
+  color: var(--rose-900);
+  font-family: "Trebuchet MS", sans-serif;
   font-size: .875rem;
   letter-spacing: .12em;
   margin-bottom: 12px;
@@ -48,7 +42,7 @@ h2 {
 }
 
 .date-options {
-  grid-auto-columns: minmax(88px, 1fr);
+  grid-auto-columns: minmax(96px, 1fr);
   grid-auto-flow: column;
   overflow-x: auto;
   padding-bottom: 6px;
@@ -69,13 +63,13 @@ h2 {
 .selection-option,
 .confirm-button {
   border: none;
-  border-radius: 1rem;
-  background: #fff;
-  box-shadow: 0 .25rem #dfd9d9;
-  color: #fd1853;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .7);
+  box-shadow: 0 8px 18px rgba(159, 49, 85, .1);
+  color: var(--rose-900);
   cursor: pointer;
-  font-family: Montserrat, sans-serif;
-  transition: background .3s ease-in-out, color .3s ease-in-out, transform .3s ease-in-out;
+  font-family: "Trebuchet MS", sans-serif;
+  transition: background .25s ease, box-shadow .25s ease, color .25s ease, transform .25s ease;
 }
 
 .selection-option {
@@ -94,24 +88,16 @@ h2 {
 
 .selection-option:hover,
 .selection-option.selected {
-  background: #f08080;
-  color: #fffcfd;
+  background: var(--rose-700);
+  box-shadow: 0 10px 20px rgba(159, 49, 85, .22);
+  color: var(--cream);
   transform: translateY(-2px);
 }
 
 .confirm-button {
   align-self: center;
-  background: #fd1853;
-  color: #fffcfd;
-  font-size: 1rem;
-  font-weight: 700;
   max-width: 100%;
-  padding: .9rem 1.25rem;
-}
-
-.confirm-button:hover {
-  background: #f08080;
-  transform: scale(.98);
+  text-align: center;
 }
 
 @media (max-width: 520px) {
