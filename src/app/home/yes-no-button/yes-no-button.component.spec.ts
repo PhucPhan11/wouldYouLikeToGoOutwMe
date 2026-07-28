@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter, Router } from '@angular/router';
 
 import { YesNoButtonComponent } from './yes-no-button.component';
 
@@ -8,7 +9,8 @@ describe('YesNoButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [YesNoButtonComponent]
+      imports: [YesNoButtonComponent],
+      providers: [provideRouter([])]
     })
     .compileComponents();
 
@@ -35,5 +37,24 @@ describe('YesNoButtonComponent', () => {
     expect(component.noLabel).toBe('Yes, pleaseeeee');
     expect(component.yesScale).toBe(1.75);
     expect(component.noScale).toBe(0.25);
+  });
+
+  it('should navigate to success when Yes is selected', () => {
+    const router = TestBed.inject(Router);
+    const navigate = spyOn(router, 'navigate');
+
+    component.onYesClick();
+
+    expect(navigate).toHaveBeenCalledWith(['/success']);
+  });
+
+  it('should navigate to success when the final No label is selected', () => {
+    const router = TestBed.inject(Router);
+    const navigate = spyOn(router, 'navigate');
+    component.noLabelIndex = component.noLabels.length - 1;
+
+    component.onNoClick();
+
+    expect(navigate).toHaveBeenCalledWith(['/success']);
   });
 });

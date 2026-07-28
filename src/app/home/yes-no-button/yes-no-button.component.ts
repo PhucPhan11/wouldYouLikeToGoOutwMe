@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-yes-no-button',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
     styleUrl: './yes-no-button.component.css'
 })
 export class YesNoButtonComponent {
+  private readonly router = inject(Router);
+
   readonly noLabels = [
     'No',
     'Are you sure?',
@@ -31,12 +34,15 @@ export class YesNoButtonComponent {
   }
 
   onYesClick() {
-    console.log('Yes clicked!');
+    this.router.navigate(['/success']);
   }
 
   onNoClick() {
-    if (this.noLabelIndex < this.noLabels.length - 1) {
-      this.noLabelIndex++;
+    if (this.noLabelIndex === this.noLabels.length - 1) {
+      this.router.navigate(['/success']);
+      return;
     }
+
+    this.noLabelIndex++;
   }
 }

@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-between gap-5">
-  <button class="heart-button" [style.--button-scale]="yesScale" style="border-radius: 1rem; z-index: 1;">
+  <button class="heart-button" [style.--button-scale]="yesScale" (click)="onYesClick()" style="border-radius: 1rem; z-index: 1;">
     <span class="box">Yes</span>
     <div class="star-1">
       <svg height="25" width="25" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
