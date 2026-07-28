@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface DateOption {
   readonly date: Date;
   readonly label: string;
+  readonly summaryLabel: string;
   readonly weekday: string;
 }
 
@@ -18,6 +20,8 @@ interface TimeOption {
   styleUrl: './date-selection.component.css'
 })
 export class DateSelectionComponent {
+  private readonly router = inject(Router);
+
   readonly dateOptions = this.createDateOptions();
   readonly timeOptions: TimeOption[] = [
     { label: '5:00 PM', helper: "let's go" },
@@ -51,12 +55,27 @@ export class DateSelectionComponent {
     this.selectedActivity = activity;
   }
 
+  onConfirm() {
+    this.router.navigate(['/confirmation'], {
+      queryParams: {
+        date: this.selectedDate.summaryLabel,
+        time: this.selectedTime.label,
+        activity: this.selectedActivity
+      }
+    });
+  }
+
   private createDateOptions(): DateOption[] {
     const formatter = new Intl.DateTimeFormat('en-US', {
       month: 'short',
       day: 'numeric'
     });
     const weekdayFormatter = new Intl.DateTimeFormat('en-US', { weekday: 'short' });
+    const summaryFormatter = new Intl.DateTimeFormat('en-US', {
+      weekday: 'long',
+      month: 'short',
+      day: 'numeric'
+    });
     const today = new Date();
     today.setHours(12, 0, 0, 0);
 
@@ -67,6 +86,7 @@ export class DateSelectionComponent {
       return {
         date,
         label: formatter.format(date),
+        summaryLabel: summaryFormatter.format(date),
         weekday: index === 0 ? 'Today' : weekdayFormatter.format(date)
       };
     });
