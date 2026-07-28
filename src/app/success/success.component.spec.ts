@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter, Router } from '@angular/router';
 import { SuccessComponent } from './success.component';
 
 describe('SuccessComponent', () => {
@@ -7,7 +8,8 @@ describe('SuccessComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SuccessComponent]
+      imports: [SuccessComponent],
+      providers: [provideRouter([])]
     }).compileComponents();
 
     fixture = TestBed.createComponent(SuccessComponent);
@@ -21,5 +23,14 @@ describe('SuccessComponent', () => {
     expect(component).toBeTruthy();
     expect(element.querySelector('h1')?.textContent).toContain('Yayyyy! love youuuu');
     expect(element.querySelector('button')?.textContent).toContain("Let's choose a date");
+  });
+
+  it('should navigate to date selection', () => {
+    const router = TestBed.inject(Router);
+    const navigate = spyOn(router, 'navigate');
+
+    component.onChooseDate();
+
+    expect(navigate).toHaveBeenCalledWith(['/date-selection']);
   });
 });

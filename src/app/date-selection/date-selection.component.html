@@ -1,0 +1,53 @@
+<main class="date-selection">
+  <section class="date-card">
+    <h1>Let's plan our date <span aria-label="heart" role="img">❤️</span></h1>
+    <p class="subtitle">Pick what feels perfect for us.</p>
+
+    <section>
+      <h2>WHEN SHOULD WE GO?</h2>
+      <div class="date-options" aria-label="Date options">
+        @for (date of dateOptions; track date.date) {
+          <button
+            class="selection-option date-option"
+            [class.selected]="selectedDate === date"
+            (click)="selectDate(date)">
+            <span>{{ date.weekday }}</span>
+            <strong>{{ date.label }}</strong>
+          </button>
+        }
+      </div>
+    </section>
+
+    <section>
+      <h2>WHAT TIME?</h2>
+      <div class="time-options">
+        @for (time of timeOptions; track time.label) {
+          <button
+            class="selection-option"
+            [class.selected]="selectedTime === time"
+            (click)="selectTime(time)">
+            <strong>{{ time.label }}</strong>
+            <span>{{ time.helper }}</span>
+          </button>
+        }
+      </div>
+    </section>
+
+    <section>
+      <h2>WHAT ARE WE DOING?</h2>
+      <div class="activity-options">
+        @for (activity of activityOptions; track activity; let index = $index) {
+          <button
+            class="selection-option"
+            [class.selected]="selectedActivity === activity"
+            [class.unique-activity]="index === 3"
+            (click)="selectActivity(activity)">
+            {{ activity }}
+          </button>
+        }
+      </div>
+    </section>
+
+    <button class="confirm-button">{{ confirmLabel }}</button>
+  </section>
+</main>

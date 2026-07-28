@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-success',
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './success.component.html',
   styleUrl: './success.component.css'
 })
-export class SuccessComponent {}
+export class SuccessComponent {
+  private readonly router = inject(Router);
+
+  onChooseDate() {
+    this.router.navigate(['/date-selection']);
+  }
+}
