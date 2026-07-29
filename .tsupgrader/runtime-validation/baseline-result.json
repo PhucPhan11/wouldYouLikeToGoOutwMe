@@ -1,0 +1,59 @@
+{
+  "planHash": "6649c11f9663a7decf2ad0b04035d77304da68e25fd38c0a9f8145feb5f9c8b1",
+  "phase": "baseline",
+  "recordedAtUtc": "2026-07-29T03:49:12.2871611Z",
+  "retryCount": 0,
+  "resetBaseline": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 0,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "angular-build",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E would-you-like@0.0.0 build\r\n\u003E ng build\r\n\r\n\u001B[33m\u003E\u001B[39m Building...\r\n\u001B[32m\u221A\u001B[39m Building...\r\n\u001B[1mInitial chunk files\u001B[22m  \u001B[2m | \u001B[22m\u001B[1mNames\u001B[22m        \u001B[2m | \u001B[22m \u001B[1mRaw size\u001B[22m\u001B[2m | \u001B[22m\u001B[1mEstimated transfer size\u001B[22m\r\n\u001B[32mmain-4VKDRWHZ.js\u001B[39m     \u001B[2m | \u001B[22m\u001B[2mmain\u001B[22m         \u001B[2m | \u001B[22m\u001B[36m212.10 kB\u001B[39m\u001B[2m | \u001B[22m               \u001B[36m57.69 kB\u001B[39m\r\n\u001B[32mpolyfills-5CFQRCPP.js\u001B[39m\u001B[2m | \u001B[22m\u001B[2mpolyfills\u001B[22m    \u001B[2m | \u001B[22m \u001B[36m34.59 kB\u001B[39m\u001B[2m | \u001B[22m               \u001B[36m11.33 kB\u001B[39m\r\n\u001B[32mstyles-FNOAORTP.css\u001B[39m  \u001B[2m | \u001B[22m\u001B[2mstyles\u001B[22m       \u001B[2m | \u001B[22m  \u001B[36m3.09 kB\u001B[39m\u001B[2m | \u001B[22m                \u001B[36m1.02 kB\u001B[39m\r\n\r\n\u001B[1m \u001B[22m                    \u001B[2m | \u001B[22m\u001B[1mInitial total\u001B[22m\u001B[2m | \u001B[22m\u001B[1m249.77 kB\u001B[22m\u001B[2m | \u001B[22m               \u001B[1m70.04 kB\u001B[22m\r\n\r\nApplication bundle generation complete. [16.929 seconds]\r\n\r\nOutput location: c:\\Work\\Project\\wouldYouLikeToGoOutwMe\\dist\\would-you-like\r\n\r\n",
+        "durationMs": 25927
+      },
+      {
+        "name": "dev-server-serves-home",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!doctype html\u003E\r\n\u003Chtml lang=\u0022en\u0022\u003E\r\n\u003Chead\u003E\n  \u003Cscript type=\u0022module\u0022 src=\u0022/@vite/client\u0022\u003E\u003C/script\u003E\n\r\n  \u003Cmeta charset=\u0022utf-8\u0022\u003E\r\n  \u003Ctitle\u003EWouldYouLikeToGoOutWithMe\u003C/title\u003E\r\n  \u003Cbase href=\u0022/\u0022\u003E\r\n  \u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1\u0022\u003E\r\n  \u003Clink rel=\u0022icon\u0022 type=\u0022image/x-icon\u0022 href=\u0022heart.png\u0022\u003E\r\n\u003Clink rel=\u0022stylesheet\u0022 href=\u0022styles.css\u0022\u003E\u003C/head\u003E\r\n\u003Cbody\u003E\r\n  \u003Capp-root\u003E\u003C/app-root\u003E\r\n\u003Cscript src=\u0022polyfills.js\u0022 type=\u0022module\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022main.js\u0022 type=\u0022module\u0022\u003E\u003C/script\u003E\u003C/body\u003E\r\n\u003C/html\u003E\r\n",
+        "durationMs": 86
+      },
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": false,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 1,
+        "outputSample": "\r\n\u003E would-you-like@0.0.0 test\r\n\u003E ng test --watch=false --browsers=ChromeHeadless\r\n\r\n\u001B[33m\u003E\u001B[39m Building...\r\n\u001B[32m\u221A\u001B[39m Building...\r\n\u001B[1mInitial chunk files\u001B[22m                  \u001B[2m | \u001B[22m\u001B[1mNames\u001B[22m                             \u001B[2m | \u001B[22m \u001B[1mRaw size\u001B[22m\r\n\u001B[32mchunk-HNION42H.js\u001B[39m                    \u001B[2m | \u001B[22m\u001B[2m-\u001B[22m                                 \u001B[2m | \u001B[22m  \u001B[36m2.50 MB\u001B[39m\u001B[2m | \u001B[22m\r\n\u001B[32mpolyfills.js\u001B[39m                         \u001B[2m | \u001B[22m\u001B[2mpolyfills\u001B[22m                         \u001B[2m | \u001B[22m  \u001B[36m1.03 MB\u001B[39m\u001B[2m | \u001B[22m\r\n\u001B[32mchunk-G2IL54SR.js\u001B[39m                    \u001B[2m | \u001B[22m\u001B[2m-\u001B[22m                                 \u001B[2m | \u001B[22m\u001B[36m253.31 kB\u001B[39m\u001B[2m | \u001B[22m\r\n\u001B[32mjasmine-cleanup-1.js\u001B[39m                 \u001B[2m | \u001B[22m\u001B[2mjasmine-cleanup-1\u001B[22m                 \u001B[2m | \u001B[22m \u001B[36m67.20 kB\u001B[39m\u001B[2m | \u001B[22m\r\n\u001B[32mtest_main.js\u001B[39m                         \u001B[2m | \u001B[22m\u001B[2mtest_main\u001B[22m                         \u001B[2m | \u001B[22m \u001B[36m21.91 kB\u001B[39m\u001B[2m | \u001B[22m\r\n\u001B[32mspec-date-selection.component.spec.js\u001B[39m\u001B[2m | \u001B[22m\u001B[2mspec-date-selection.component.spec\u001B[22m\u001B[2m | \u001B[22m  \u001B[36m9.69 kB\u001B[39m\u001B[2m | \u001B[22m\r\n\u001B[32mchunk-CVNSWTXG.js\u001B[39m                    \u001B[2m | \u001B[22m\u001B[2m-\u001B[22m                                 \u001B[2m | \u001B[22m  \u001B[36m8.98 kB\u001B[39m\u001B[2m | \u001B[22m\r\n\u001B[32mspec-confirmation.component.spec.js\u001B[39m  \u001B[2m | \u001B[22m\u001B[2mspec-confirmation.component.spec\u001B[22m  \u001B[2m | \u001B[22m  \u001B[36m4.48 kB\u001B[39m\u001B[2m | \u001B[22m\r\n\u001B[32mspec-app.component.spec.js\u001B[39m           \u001B[2m | \u001B[22m\u001B[2mspec-app.component.spec\u001B[22m           \u001B[2m | \u001B[22m  \u001B[36m4.12 kB\u001B[39m\u001B[2m | \u001B[22m\r\n\u001B[32mstyles.css\u001B[39m                           \u001B[2m | \u001B[22m\u001B[2mstyles\u001B[22m                            \u001B[2m | \u001B[22m  \u001B[36m3.87 kB\u001B[39m\u001B[2m | \u001B[22m\r\n\u001B[32mspec-success.component.spec.js\u001B[39m       \u001B[2m | \u001B[22m\u001B[2mspec-success.component.spec\u001B[22m       \u001B[2m | \u001B[22m  \u001B[36m3.52 kB\u001B[39m\u001B[2m | \u001B[22m\r\n\u001B[32mspec-home.component.spec.js\u001B[39m          \u001B[2m | \u001B[22m\u001B[2mspec-home.component.spec\u001B[22m          \u001B[2m | \u001B[22m  \u001B[36m2.72 kB\u001B[39m\u001B[2m | \u001B[22m\r\n\u001B[32mspec-yes-no-button.component.spec.js\u001B[39m \u001B[2m | \u001B[22m\u001B[2mspec-yes-no-button.component.spec\u001B[22m \u001B[2m | \u001B[22m  \u001B[36m2.39 kB\u001B[39m\u001B[2m | \u001B[22m\r\n\u001B[32mchunk-TTULUY32.js\u001B[39m                    \u001B[2m | \u001B[22m\u001B[2m-\u001B[22m                                 \u001B[2m | \u001B[22m  \u001B[36m1.99 kB\u001B[39m\u001B[2m | \u001B[22m\r\n\u001B[32mjasmine-cleanup-0.js\u001B[39m                 \u001B[2m | \u001B[22m\u001B[2mjasmine-cleanup-0\u001B[22m                 \u001B[2m | \u001B[22m\u001B[36m519 bytes\u001B[39m\u001B[2m | \u001B[22m\r\n\r\n\u001B[1m \u001B[22m                                    \u001B[2m | \u001B[22m\u001B[1mInitial total\u001B[22m                     \u001B[2m | \u001B[22m  \u001B[1m3.92 MB\u001B[22m\r\n\r\nApplication bundle generation complete. [5.144 seconds]\r\n\r\n\u001B[32m29 07 2026 10:48:56.902:INFO [karma-server]: \u001B[39mKarma v6.4.4 server started at http://localhost:9876/\r\n\u001B[32m29 07 2026 10:48:56.905:INFO [launcher]: \u001B[39mLaunching browsers ChromeHeadless with concurrency unlimited\r\n\u001B[32m29 07 2026 10:48:57.092:INFO [launcher]: \u001B[39mStarting browser ChromeHeadless\r\n\u001B[32m29 07 2026 10:48:59.700:INFO [Chrome Headless 150.0.0.0 (Windows 10)]: \u001B[39mConnected on socket 5gQqkfi9JoRY7DecAAAB with id 1661817\r\nChrome Headless 150.0.0.0 (Windows 10): Executed 0 of 14\u001B[32m SUCCESS\u001B[39m (0 secs / 0 secs)\r\n\u001B[1A\u001B[2KChrome Headless 150.0.0.0 (Windows 10): Executed 1 of 14\u001B[32m SUCCESS\u001B[39m (0 secs / 0.198 secs)\r\n\u001B[1A\u001B[2KChrome Headless 150.0.0.0 (Windows 10): Executed 2 of 14\u001B[32m SUCCESS\u001B[39m (0 secs / 0.211 secs)\r\n\u001B[1A\u001B[2KChrome Headless 150.0.0.0 (Windows 10): Executed 3 of 14\u001B[32m SUCCESS\u001B[39m (0 secs / 0.23 secs)\r\n\u001B[1A\u001B[2KChrome Headless 150.0.0.0 (Windows 10): Executed 4 of 14\u001B[32m SUCCESS\u001B[39m (0 secs / 0.328 secs)\r\n\u001B[1A\u001B[2KChrome Headless 150.0.0.0 (Windows 10): Executed 5 of 14\u001B[32m SUCCESS\u001B[39m (0 secs / 0.346 secs)\r\n\u001B[1A\u001B[2KChrome Headless 150.0.0.0 (Windows 10): Executed 6 of 14\u001B[32m SUCCESS\u001B[39m (0 secs / 0.362 secs)\r\n\u001B[1A\u001B[2KChrome Headless 150.0.0.0 (Windows 10): Executed 7 of 14\u001B[32m SUCCESS\u001B[39m (0 secs / 0.394 secs)\r\n\u001B[1A\u001B[2KChrome Headless 150.0.0.0 (Windows 10): Executed 8 of 14\u001B[32m SUCCESS\u001B[39m (0 secs / 0.418 secs)\r\n\u001B[1A\u001B[2KChrome Headless 150.0.0.0 (Window\n\u2026[truncated]",
+        "durationMs": 60446,
+        "testResults": {
+          "testFramework": "jasmine",
+          "runnerDetectedFrom": "package_json",
+          "testsTotal": 0,
+          "testsPassed": 0,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": true
+        }
+      }
+    ]
+  }
+}
