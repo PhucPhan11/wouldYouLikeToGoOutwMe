@@ -29,3 +29,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Deploy
 Build 'ng build --configuration production --base-href /wouldYouLikeToGoOutwMe/'
 Push to gh-pages 'npx angular-cli-ghpages --dir=dist/would-you-like/browser'
+
+## Publish page
+https://phucphan11.github.io/wouldYouLikeToGoOutwMe/
