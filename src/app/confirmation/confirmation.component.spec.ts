@@ -6,6 +6,8 @@ describe('ConfirmationComponent', () => {
   let fixture: ComponentFixture<ConfirmationComponent>;
 
   beforeEach(async () => {
+    spyOn(window, 'fetch').and.resolveTo(new Response());
+
     await TestBed.configureTestingModule({
       imports: [ConfirmationComponent],
       providers: [{
