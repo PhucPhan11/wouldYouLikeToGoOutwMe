@@ -27,7 +27,7 @@
 }
 
 .summary {
-  color: var(--rose-700);
+  color: var(--aqua-700);
   font-family: "Trebuchet MS", sans-serif;
   font-size: clamp(1rem, 3vw, 1.35rem);
   font-weight: 700;
